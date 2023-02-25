@@ -14,13 +14,17 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: browser-actions/setup-chrome@v1
+      - uses: abhi1693/setup-browser@v0.3.4
         with:
-          chrome-version: beta
-          id: setup-chrome
-      - run: |
-          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }} chrome --version
-          
+         browser: [chrome, edge, firefox, safari, brave]
+         version: latest
+      # - uses: browser-actions/setup-chrome@v1
+      #   with:
+      #     chrome-version: beta
+      #     id: setup-chrome
+      # - run: |
+      #     echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }} chrome --version
+
       - name: Install 🔧
         run: yarn install
 
