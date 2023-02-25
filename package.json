@@ -21,10 +21,10 @@
   "bugs": {
     "url": "https://github.com/godfred-nsabo/godfred-resume/issues"
   },
-  "homepage": "https://github.com/godfred-nsabo/godfred-resume#readme",
+  "homepage": "https://godfred-nsabo.github.io/godfred-resume",
   "dependencies": {
     "chokidar-cli": "^3.0.0",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "handlebars": "^4.7.7",
     "helper-markdown": "^1.0.0",
     "resume-cli": "patch:resume-cli@3.0.4#./patches/fix-493.patch",
