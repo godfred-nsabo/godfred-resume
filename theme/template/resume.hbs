@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{#resume.basics}}
+    {{#name}}
+    <title>{{.}} - Resumé</title>
+    {{/name}}
+    {{#picture}}
+    <link rel="shortcut icon" href="{{.}}" />
+    {{/picture}}
+    {{/resume.basics}}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+
+    <style>
+    {{{css}}}
+
+    @media print {
+    {{{print}}}
+    }
+    </style>
+
+  </head>
+  <body>
+    <a class="visually-hidden-focusable" href="#home">Skip to main content</a>
+
+    <main id="home">
+      {{#resume.webpage}}
+        {{#alert}}<div class="alert alert-dark d-print-none mb-0 pb-0 rounded-0 text-center" role="alert">{{{markdown this}}}</div>{{/alert}}
+      {{/resume.webpage}}
+
+      {{#resume.basics}}
+      <header class="bg-light mb-3 mb-md-4 py-2 py-md-5" id="header">
+        <div class="container">
+          <div class="row align-items-center">
+            {{#picture}}
+            <div class="col-4 col-md-2 offset-md-1 text-end">
+              <img class="profile-picture img-fluid" src="{{.}}" alt="Picture of {{../name}}">
+            </div>
+            {{/picture}}
+            <div class="col col-md-9">
+              {{#name}}<h1 class="mb-1">{{.}} {{#../postnominals}}<span class="postnominals ms-lg-2 text-nowrap text-muted">{{.}}</span>{{/../postnominals}}</h1>{{/name}}
+              {{#label}}<div class="h3 text-secondary">{{.}}</div>{{/label}}
+            </div>
+          </div>
+        </div>
+      </header>
+      {{/resume.basics}}
+
+      <div class="container" id="content">
+        {{#resume.basics}}
+        <section class="row" id="contact">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Contact</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1 row-cols-sm-3">
+            {{#email}}
+            <div class="col contact">
+              <strong>Email</strong>
+              <div class="email">
+                <a href="mailto:{{.}}">{{.}}</a>
+              </div>
+            </div>
+            {{/email}}
+            {{#phone}}
+            <div class="col contact">
+              <strong>Phone</strong>
+              <div class="phone"><a href="tel:{{.}}">{{.}}</a></div>
+            </div>
+            {{/phone}}
+            {{#website}}
+            <div class="col contact">
+              <strong>Website</strong>
+              <div class="website">
+                <a href="{{.}}">{{.}}</a>
+              </div>
+            </div>
+            {{/website}}
+            {{#location}}
+            <div class="col contact">
+              <strong>Address</strong>
+              <div class="location">
+                {{.}}
+              </div>
+            </div>
+            {{/location}}
+            </div>
+          </div>
+        </section>
+        <section id="about" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>About</h2>
+          </div>
+          <div class="col-sm-8 col-md-9 lead about">
+          {{#summary}}{{{markdown this}}}{{/summary}}
+          </div>
+        </section>
+        {{/resume.basics}}
+
+        <nav class="navbar navbar-expand-md bg-light sticky-top my-5 d-print-none" id="navbar">
+          <div class="container-fluid">
+            {{#resume.basics}}
+            <a class="navbar-brand d-md-none" href="#main">
+              {{#picture}}
+              <img class="me-1" src="{{.}}" alt="Picture of {{../name}}" width="30" height="30">
+              {{/picture}}
+              {{name}}
+            </a>
+            {{/resume.basics}}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResume" aria-controls="navbarResume" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center bg-light" id="navbarResume">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#home">Home</a>
+                </li>
+                {{#if resume.basics.profiles.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#profiles">Profiles</a>
+                </li>
+                {{/if}}
+                {{#if resume.work.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#employment">Employment</a>
+                </li>
+                {{/if}}
+                {{#if resume.projects.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                {{/if}}
+                {{#if resume.volunteer.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#volunteering">Volunteering</a>
+                </li>
+                {{/if}}
+                {{#if resume.education.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#education">Education</a>
+                </li>
+                {{/if}}
+                {{#if resume.awards.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#awards">Awards</a>
+                </li>
+                {{/if}}
+                {{#if resume.publications.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#publications">Publications</a>
+                </li>
+                {{/if}}
+                {{#if resume.skills.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                {{/if}}
+                {{#if resume.languages.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#languages">Languages</a>
+                </li>
+                {{/if}}
+                {{#if resume.interests.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#interests">Interests</a>
+                </li>
+                {{/if}}
+                {{#if resume.references.length}}
+                <li class="nav-item">
+                  <a class="nav-link" href="#references">References</a>
+                </li>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        {{#resume.basics}}
+        {{#if profiles.length}}
+        <section id="profiles" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Profiles</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+              {{#profiles}}
+              <div class="col profile">
+                {{#network}}
+                <strong class="network">
+                  {{.}}
+                </strong>
+                {{/network}}
+                {{#if username}}
+                <div class="username">
+                  {{#if url}}
+                  <div class="url">
+                    <a href="{{url}}">{{username}}</a>
+                  </div>
+                  {{else}}
+                    {{username}}
+                  {{/if}}
+                </div>
+                {{else}}
+                  {{#if url}}
+                  <div class="url">
+                    <a href="{{url}}">{{url}}</a>
+                  </div>
+                  {{/if}}
+                {{/if}}
+              </div>
+              {{/profiles}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+        {{/resume.basics}}
+
+        {{#if resume.work.length}}
+        <section id="employment" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Employment</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1">
+            {{#each resume.work}}
+              <div class="col section-item work {{#if printHide}}d-print-none{{/if}}">
+                <h3 class="strike-through">
+                  <span>{{company}}</span>
+                  <span class="date">
+                    {{startDate}} — {{#endDate}}{{.}}{{else}}Present{{/endDate}}
+                  </span>
+                </h3>
+                {{#website}}
+                <div class="website">
+                  <a href="{{.}}">{{.}}</a>
+                </div>
+                {{/website}}
+                {{#position}}
+                <div class="position">
+                  {{.}}
+                </div>
+                {{/position}}
+                {{#summary}}
+                <div class="summary lead">{{{markdown this}}}</div>
+                {{/summary}}
+                {{#if highlights.length}}
+                {{#if summary}}<div class="h4 d-print-none">Highlights</div>{{/if}}
+                <ul class="list-fancy highlights">
+                  {{#highlights}}
+                  <li>{{{markdown this}}}</li>
+                  {{/highlights}}
+                </ul>
+                {{/if}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.projects.length}}
+        <section id="projects" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Projects</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1">
+            {{#each resume.projects}}
+              <div class="col section-item project {{#if printHide}}d-print-none{{/if}}">
+                <h3 class="strike-through">
+                  <span>{{entity}}</span>
+                  <span class="date">
+                    {{startDate}} — {{#endDate}}{{.}}{{else}}Present{{/endDate}}
+                  </span>
+                </h3>
+                {{#url}}
+                <div class="url">
+                  <a href="{{.}}">{{.}}</a>
+                </div>
+                {{/url}}
+                {{#name}}
+                <div class="name">
+                  <span class="type">{{../type}}</span> – {{.}}
+                </div>
+                {{/name}}
+                {{#description}}
+                <div class="summary lead">
+                  {{{markdown this}}}
+                </div>
+                {{/description}}
+                <div class="row row-cols-2">
+                  {{#if highlights.length}}
+                  <div class="col">
+                    {{#if description}}
+                    <div class="h4">Highlights</div>
+                    {{else}}
+                    {{#if roles}}<div class="h4">Highlights</div>{{/if}}
+                    {{/if}}
+                    <ul class="list-fancy highlights">
+                      {{#highlights}}
+                      <li>{{{markdown this}}}</li>
+                      {{/highlights}}
+                    </ul>
+                  </div>
+                  {{/if}}
+                  {{#if roles.length}}
+                  <div class="col">
+                    <div class="h4">Roles</div>
+                    <ul class="list-fancy roles">
+                      {{#roles}}
+                      <li>{{{markdown this}}}</li>
+                      {{/roles}}
+                    </ul>
+                  </div>
+                  {{/if}}
+                </div>
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.volunteer.length}}
+        <section id="volunteering" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Volunteering</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1">
+            {{#each resume.volunteer}}
+              <div class="col section-item volunteer {{#if printHide}}d-print-none{{/if}}">
+                <h3 class="strike-through">
+                  <span>{{organization}}</span>
+                  <span class="date">
+                    {{startDate}} — {{#endDate}}{{.}}{{else}}Present{{/endDate}}
+                  </span>
+                </h3>
+                {{#website}}
+                <div class="website">
+                  <a href="{{.}}">{{.}}</a>
+                </div>
+                {{/website}}
+                {{#position}}
+                <div class="position">
+                  {{.}}
+                </div>
+                {{/position}}
+                {{#summary}}
+                <div class="summary lead">
+                  {{{markdown this}}}
+                </div>
+                {{/summary}}
+                {{#if highlights.length}}
+                {{#if summary}}<div class="h4 d-print-none">Highlights</div>{{/if}}
+                <ul class="list-fancy highlights">
+                  {{#highlights}}
+                  <li>{{{markdown this}}}</li>
+                  {{/highlights}}
+                </ul>
+                {{/if}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.education.length}}
+        <section id="education" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Education</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1">
+            {{#each resume.education}}
+              <div class="col section-item education {{#if printHide}}d-print-none{{/if}}">
+                <h3 class="strike-through">
+                  <span>{{institution}}</span>
+                  <h5>{{affiliation}}</h5>
+                  <span class="date">
+                    {{startDate}} — {{#endDate}}{{.}}{{else}}Present{{/endDate}}
+                  </span>
+                </h3>
+                {{#area}}
+                <div class="area">
+                  {{.}}
+                </div>
+                {{/area}}
+                {{#studyType}}
+                <div class="studyType">
+                  {{.}}
+                </div>
+                {{/studyType}}
+                {{#if courses.length}}
+                <h3>Courses</h3>
+                <ul class="list-fancy courses">
+                  {{#courses}}
+                  <li>{{.}}</li>
+                  {{/courses}}
+                </ul>
+                {{/if}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.awards.length}}
+        <section id="awards" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Awards</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1">
+            {{#each resume.awards}}
+              <div class="col section-item award {{#if printHide}}d-print-none{{/if}}">
+                <h3 class="strike-through">
+                  <span>{{title}}</span>
+                </h3>
+                <div class="award-details">
+                  {{#date}}
+                  <span class="date">
+                  <em>Awarded</em>
+                  {{.}}
+                  </span>
+                  {{/date}}
+                  {{#awarder}}
+                  <span class="awarder">
+                    <em>by</em>
+                    <strong>{{.}}</strong>
+                  </span>
+                  {{/awarder}}
+                </div>
+                {{#summary}}
+                <div class="summary lead">
+                  {{{markdown this}}}
+                </div>
+                {{/summary}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.publications.length}}
+        <section id="publications" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Publications</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1">
+            {{#each resume.publications}}
+              <div class="col section-item publication {{#if printHide}}d-print-none{{/if}}">
+                <h3 class="strike-through">
+                  <span>{{name}}</span>
+                  <span class="date">
+                    {{releaseDate}}
+                  </span>
+                </h3>
+                {{#website}}
+                <div class="website">
+                  <a href="{{.}}"></a>
+                </div>
+                {{/website}}
+                {{#publisher}}
+                <div class="publisher">
+                  <em>Published by</em>
+                  <strong>{{.}}</strong>
+                </div>
+                {{/publisher}}
+                {{#summary}}
+                <div class="summary lead">
+                  {{{markdown this}}}
+                </div>
+                {{/summary}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.skills.length}}
+        <section id="skills" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Skills</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1 row-cols-sm-2">
+            {{#each resume.skills}}
+              <div class="col section-item skill">
+                {{#name}}
+                <div class="name">
+                  <h3>{{.}}</h3>
+                </div>
+                {{/name}}
+                {{#if keywords.length}}
+                <ul class="list-fancy keywords">
+                  {{#keywords}}
+                  <li>{{{markdown this}}}</li>
+                  {{/keywords}}
+                </ul>
+                {{/if}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.languages.length}}
+        <section id="languages" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Languages</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1 row-cols-sm-2">
+            {{#each resume.languages}}
+              <div class="col {{#if printHide}}d-print-none{{/if}}">
+                {{#language}}
+                <div class="language">
+                  <strong>{{.}}</strong>
+                </div>
+                {{/language}}
+                {{#fluency}}
+                <div class="fluency">
+                  {{.}}
+                </div>
+                {{/fluency}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.interests.length}}
+        <section id="interests" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>Interests</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1 row-cols-sm-2">
+            {{#each resume.interests}}
+              <div class="col {{#if printHide}}d-print-none{{/if}}">
+                {{#name}}
+                <div class="name">
+                  <h3>{{.}}</h3>
+                </div>
+                {{/name}}
+                {{#if keywords.length}}
+                <ul class="list-fancy keywords">
+                  {{#keywords}}
+                  <li>{{.}}</li>
+                  {{/keywords}}
+                </ul>
+                {{/if}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+
+        {{#if resume.references.length}}
+        <section id="references" class="row">
+          <div class="col-sm-4 col-md-3 section-heading">
+            <h2>References</h2>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="row row-cols-1">
+            {{#each resume.references}}
+              <div class="col">
+                {{#if reference}}
+                <blockquote class="blockquote">
+                  <div class="reference">
+                  {{{markdown reference}}}
+                  </div>
+                  {{#name}}
+                  <footer class="blockquote-footer">
+                    {{.}}
+                  </footer>
+                  {{/name}}
+                </blockquote>
+                {{/if}}
+              </div>
+            {{/each}}
+            </div>
+          </div>
+        </section>
+        {{/if}}
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+      (function() {
+        Array.from(document.querySelectorAll('#navbar .nav-link'))
+          .forEach(e => e.addEventListener('click', () => {
+            bootstrap.Collapse.getInstance('#navbarResume').hide()
+          }))
+      })()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "jsonresume-theme-godfrednsabo",
+  "version": "0.1.0",
+  "description": "iheme for JSON Resume",
+  "author": "Godfred Nsabo",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.6"
+  }
+}

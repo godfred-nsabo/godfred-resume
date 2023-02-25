@@ -1,0 +1,225 @@
+html,
+body {
+  /* 56px navbar height + padding */
+  scroll-padding-top: 72px;
+}
+
+/* Backport https://github.com/twbs/bootstrap/pull/29198 */
+a {
+ color: #0d6efd;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.container > .navbar {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #666666;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #d28200;
+  text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0.5rem 0.5rem;
+    background: #f8f9fa;
+    background: var(--light);
+  }
+}
+
+section {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+  border-bottom: 0 none;
+}
+
+.section-item {
+  margin-bottom: 0.5rem;
+}
+
+.section-item:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+  font-size: 2rem;
+  color: #d28200;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  h2 {
+    text-align: right;
+  }
+}
+
+h3 span:first-child {
+  font-weight: bold;
+}
+
+.strike-through {
+  position: relative;
+  border-top: 1px solid #ccc;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+.strike-through span,
+.strike-through a {
+  background: #fff;
+  display: inline-block;
+  transform: translateY(-50%);
+}
+.strike-through span:first-child {
+  padding-right: 1rem;
+}
+
+.strike-through span + span {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .strike-through span + span {
+    font-size: 0.9rem;
+  }
+}
+
+.summary {
+  margin-top: 0.5rem;
+}
+
+.list-fancy {
+  list-style: none;
+}
+
+.list-fancy > li::before {
+  content: "\f052";
+  position: absolute;
+  float: left;
+  font: 13px Octicons;
+  margin-top: 6px;
+  margin-left: -20px;
+  opacity: .3;
+}
+
+.list-fancy > li > p {
+  margin-bottom: 0;
+}
+
+.postnominals {
+  font-size: 50%;
+  font-weight: normal;
+}
+
+.contact,
+.profile {
+  margin-bottom: 1rem;
+}
+
+.contact:last-child,
+.profile:last-child {
+  margin-bottom: 0;
+}
+
+.profile .network {
+  text-transform: uppercase;
+}
+
+.about {
+  line-height: 1.2;
+}
+
+.project .type {
+  text-transform: capitalize;
+}
+
+.work .position,
+.project .name,
+.volunteer .position,
+.education .area {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.work .website,
+.volunteer .website,
+.project .url {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .work .website,
+  .volunteer .website,
+  .project .url {
+    float: right;
+    margin-left: 1rem;
+  }
+}
+
+.education .area::before {
+  content: "\f0d7";
+  font: 2rem Octicons;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.education .studyType {
+  margin-left: 1.5rem;
+}
+
+.publication .website a::before {
+  content: "View publication";
+}
+
+@media (min-width: 768px) {
+  #publications .website a::before {
+    content: attr(href);
+  }
+}
+
+.skills .list-fancy {
+  margin-bottom: 0;
+}
+
+.reference {
+  border-left: 5px solid #e7e9ec;
+  padding-left: 1rem;
+}

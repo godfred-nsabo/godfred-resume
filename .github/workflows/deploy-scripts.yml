@@ -1,0 +1,32 @@
+name: Build and deploy 
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+
+      - name: Install 🔧
+        run: yarn install
+
+      - name: Build 🏗️
+        run: |
+          yarn view
+          yarn validate
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_TOKEN }}
+          publish_dir: public
+        # run: |
+        #   yarn predeploy
+        #   yarn deploy
+         

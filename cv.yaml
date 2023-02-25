@@ -1,0 +1,313 @@
+# webpage:
+#   alert: Interested in working together? I'm available for IT consulting work. [Get in touch!](mailto:consulting@davidjb.com)
+
+basics:
+  name: Godfred Nsabo
+  # postnominals: MACS CP IP3P
+  label: DevOps, Certified Salesforce Commerce Cloud Developer, MERN-Stack Developer, 
+  picture: 'https://github.com/godfred-nsabo/godfred-resume/raw/main/cvimage.png'
+  email: gnsabo@gmail.com
+  phone: +233 (0) 24-993-1683
+  website: https://iamgoddey.github.io
+  
+  # location:
+  #   address: No.7 Bottle Street, Alice Blue Avenue
+  #   city: Takoradi
+  #   countryCode: GH
+  #   postalCode: WS-635-1905
+  #   region: Western 
+
+  profiles:
+    - network: GitHub
+      url: https://github.com/godfred-nsabo
+      username: '@godfred-nsabo'
+
+    - network: LinkedIn
+      url: https://www.linkedin.com/in/godfred-nsabo/
+      username: "@godfred-nsabo"
+
+    - network: Skype
+      url: https://skype.com/
+      username: 'live:godfred_18'
+
+  summary: |
+        Initiative DevOps Engineer, Software/Web developer and Data Scientist who leads, teach, organize, trains, and develops, motivates, and supervises 
+        others to achieve results. Teachable, smart, go-getting, and practically espouse theoretical concepts to increase productivity through quality work and paradigm shift and in remedying problems by making intriguing and crucial research in areas of interest.
+skills:
+  - name: Applications & Deployment
+    level: Intermediate
+    keywords:
+      - AWS (such as AWS EKS, AWS CodeDeploy, S3_Bucket, AWS EC2, CloudFormation)
+      - Nginx 
+      - Web application Cloud hosting (Amazon AWS, Docker)
+      - Kubernetes (minikube, Helm3)
+      - Docker Containerization
+      - SonarQube
+      - Jenkins
+      - GitHub (including GitHub Actions and Pages)
+      - Sentry
+      - Redis
+
+  - name: Web Development
+    level: Intermediate
+    keywords:
+      - JavaScript/TypeScript (such as Node.js, React/Next)
+      - Python frameworks (such as Django)
+      - HTML/CSS/SCSS
+      - Yaml/Yml
+      - Bash Scripting
+      - Websites and CMS (Salesforce, Magnolia)
+
+  - name: Programming
+    level: Intermediate
+    keywords:
+      - Python/JavaScript/Node.js
+      - Open source development
+      - Documentation writing & code review
+      - Version control & management (Git)
+
+work:
+
+  - company: AmaliTech Services GmbH    
+    website: https://amalitech.com
+    position: DevOps Engineer
+    startDate: May 2021
+    summary: >
+      Use tools such as Jenkins, Docker, GitHub Actions, SonarQube, AWS CLI
+      and AWS SDK, Nginx, Redis among others to automate, build and deploy applications with code quality analysis and review .
+    highlights:
+      - >
+        Responsibe for deploying Magnolia Full-stack (Maven) and 
+        Headless application (Next Typescript) using docker, Jenkins, AWS CodeDeploy and Route53.
+      - Responsible for deploying Shopware (PHP) and StoryBlok (Next Typescript) application with docker, Jenkins, AWS CodeDeploy and
+        Route53.
+      - Responsible for deploying Advent Calendar SAAS application (Typescript and Vue3) using AWS ECR, Docker, Kubernetes (AWS EKS, Helm
+        and Terraform), Nginx-Ingress and AWS CLI
+      - Created an online Advent Calendar for users to access and donate.
+      - Development of new applications and services in an agile, collaborative environment.
+ 
+  - company: AmaliTech Services GmbH    
+    website: https://amalitech.com
+    position: Back-End / Salesforce B2C Developer
+    startDate: Febuary 2021
+    summary: >
+      Salesforce B2C Developer building Reusable components and Plugins using SFRA and backend developer for Advent Calendar.
+    highlights:
+      - >   
+      - Develop an e-commerce website for Business to Commerce (B2C) with Salesforce Reference Architectue (SFRA)
+      - Built reusable Page Designer components such as Accordion, Select and Text Area for page customizations using SFRA
+      - Developing and testing software applications.
+      - Development of new applications and services in an agile, collaborative environment.
+      - Created an online Advent Calendar for users to access and donate.
+
+  - company: Blossom Academy & Analytics
+    website: https://blossom.africa/
+    position: Data Analyst / Machine Learning Engineer
+    endDate: February 2020
+    startDate: August 2019
+    summary: >
+      System administrator delivering services to Australian researchers in
+      areas such as medicine, biodiversity, climate change and agriculture.
+      Custom web application and micro-service development for research
+      projects, University departments and individual researchers. Platforms
+      primarily built in Python (Pyramid, Plone), frontend mapping libraries
+      (Leaflet/OpenLayers) and web technologies.
+    highlights:
+      - Predicted the estimated time of arrival (ETA) for motorbike deliveries in Nairobi. [Zindi Challenge](https://github.com/iamgoddey/Zindi_Challenge_Sendy_Logistics)
+      - Develop a staffing promotion algorithm to predict the important features used in predicting promotion eligibility. [Staffing Promotion](https://github.com/iamgoddey/staffing_promotion)
+
+# Types consist of 'volunteering', 'presentation', 'talk', 'application', 'conference'
+# projects:
+#   - type: consulting
+#     entity: LiXiA Living Infrastructure
+#     name: App Dev, Website & Setup
+#     url: https://lixia.com.au
+#     endDate: '2020-09-30'
+#     startDate: '2019-07-24'
+#     description: >
+#       Creation of rapidly-prototyped React-based tablet interface for
+#       interacting with proprietary sensor platform; a modern, responsive
+#       website for the company; design and implementation of secure, physical
+#       networking infrastructure and technology required to support a startup
+#       business.
+#     highlights:
+#       - React & JavaScript programming
+#       - Startup bootstrapping (domain, website, email)
+#       - Cloud migration and configuration
+#       - Network installation and training
+#       - WordPress development
+#       - Network deployment and configuration
+#     roles:
+#       - Lead developer
+#       - IT & security consultant
+
+#   - type: security
+#     entity: Security Reports (CVEs)
+#     #endDate
+#     startDate: '2018'
+#     highlights:
+#       - "2021: MFA Vulnerability, Private Company"
+#       - "2020: Login Vulnerabilities, Private Company"
+#       - "[CVE-2019-8063](https://helpx.adobe.com/au/security/products/creative-cloud/apsb19-39.html#Acknowledgments): Adobe Creative Cloud"
+#       - "[CVE-2018-4105](https://support.apple.com/en-us/HT208692): Apple APFS password input"
+#       - "2018: Application Vulnerabilities, Private Company"
+
+#   - type: presentation
+#     entity: Media appearances
+#     #endDate
+#     startDate: '2016'
+#     printHide: true
+#     highlights:
+#       - "ABC National News & Radio (2018-07-18): My Health Record"
+#       - "ABC Local Radio (2016): Townsville Startup Weekend"
+#       - "[QUT (2016-05-12): Pop-up 'maker space' launched to inspire Townsville](https://www.qut.edu.au/news?news-id=104539)"
+#       - "WIN local news (2016-05-16): MixHaus"
+
+
+#   - type: talk
+#     entity: Food Rescue Initiative
+#     name: Software Review & Workshop
+#     url: https://foodrescuetownsville.com/
+#     endDate: '2016-07-12'
+#     startDate: '2016-06-13'
+#     printHide: true
+#     highlights:
+#       - Open source software review & testing
+#       - Presentation preparation & delivery
+#       - Focus group leader
+#     roles:
+#       - Code reviewer
+#       - Workshop facilitator
+
+education:
+  - institution: AmaliTech Training Center gGmbH
+    type: Graduate Training Programme
+    area: Salesforce Commerce Cloud B2C / Development and Operations (DevOps)
+    endDate: January 2021
+    startDate: August 2020
+
+  - institution: Blossom Academy and Analytics
+    type: Graduate Training Programme
+    area: Machine Learning Engineering
+    endDate: February 2020
+    startDate: September 2019
+
+  - institution: University of Ghana
+    affiliation: African Institute for Mathematical Sciences (AIMS-Ghana)
+    area: Master of Science in Mathematical Sciences (MSc)
+    endDate: June 2019
+    startDate: August 2018
+
+  - institution: University of Cape Coast
+    area: Bachelor of Arts in Economics and Mathematics (Honours)
+    endDate: May 2016
+    startDate: August 2012
+
+# volunteer:
+#   - organization: DevNQ
+#     website: https://devnq.org
+#     #endDate:
+#     startDate: '2016-05-12'
+#     position: Organiser & Member
+#     summary: >
+#       Software development community connecting people events, mentoring,
+#       workshops and more in Townsville, Queensland, Australia.
+#     highlights:
+#       - Member of organising committee since 2018
+#       - Regular event presenter
+#       - Open governance author & contributor
+
+#   - organization: Gateway to Industry Schools Program
+#     website: https://qldictgisp.acs.org.au
+#     #endDate:
+#     startDate: '2020-07-01'
+#     position: Industry Partner
+#     summary: >
+#       Queensland Government program linking secondary school students, parents
+#       and educators to the ICT industry.
+#     highlights:
+#       - Providing professional development to secondary teachers
+#       - Reviewing educational content with industry input
+
+#   - organization: Young ICT Explorers
+#     website: https://www.youngictexplorers.net.au/
+#     endDate: '2019-12-31'
+#     startDate: '2015-09-01'
+#     printHide: true
+#     position: Age Category Judge
+#     summary: >
+#       Non-profit competition for school students to create and present their
+#       best ICT-related projects. Groups of students present to panels of
+#       industry judges to receive mentoring and assessment.
+#     highlights:
+#       - Interviewing & mentoring school students
+#       - Judging of ICT project entries
+
+#   - organization: MixHaus
+#     website: http://www.mixhaus.com.au
+#     endDate: '2016-12-31'
+#     startDate: '2015-12-16'
+#     printHide: true
+#     position: Volunteer
+#     summary: >
+#       Community-operated makerspace for the Townsville community. A team of
+#       locals collaborated to create a mobile, ‘pop-up’ makerspace in a shipping
+#       container for community workshops.
+#     highlights:
+#       - Design contribution and physical construction
+#       - Workshop participant and community champion
+
+#   - organization: Startup Townsville
+#     website: http://startuptownsville.com.au
+#     endDate: '2019-01-01'
+#     startDate: '2015-09-01'
+#     position: Organiser & Treasurer
+#     summary: >
+#       Local community organisation dedicated to fostering entrepreneurship in
+#       North Queensland.
+#     highlights:
+#       - Meetup organiser and treasurer (2016-2019)
+#       - Organiser of Townsville Startup Weekend 2015 & 2016
+
+#   - organization: STEM Professionals in Schools
+#     website: http://www.scientistsinschools.edu.au/ict/
+#     endDate: '2017-01-01'
+#     startDate: '2015-10-01'
+#     printHide: true
+#     position: St Margaret Mary's College
+#     summary: >
+#       CSIRO-run program for connecting volunteer STEM professionals to
+#       local schools and teachers.
+#     highlights:
+#       - Volunteer IT professional in school
+#       - Technical advisor to teachers
+#       - Course planning and assistance
+
+interests:
+  - name: Technology
+    keywords:
+      - Open source & community
+      - Node.js, Python, GoLang all languages
+      - Kubernetes/CloudFormation automation
+      - Amazon AWS / Google Cloud
+      - Web development
+      - Innovation & startups
+  # - name: Personal
+  #   printHide: true
+  #   keywords:
+  #     - Rose gardening
+  #     - Home DIY
+  #     - Fruiting trees & plants
+  #     - Cooking
+
+languages:
+  - language: English
+    fluency: Native speaker
+
+# references:
+#   - name: Paul Kofi Osei
+#     reference: |-
+#       Reference coming soon.
+#   - name: Marianne Brown
+#     reference: |-
+#       Reference coming soon.
