@@ -2,7 +2,7 @@ name: Build and deploy
 
 on:
   push:
-    branches: [main, develop]
+    branches: [master, develop]
 
 jobs:
   build:
@@ -22,11 +22,11 @@ jobs:
           yarn view
           yarn validate
       - name: Deploy to GH Pages 🚀
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.MY_TOKEN }}
-          publish_dir: public
-        # run: |
-        #   yarn predeploy
-        #   yarn deploy
+        # uses: peaceiris/actions-gh-pages@v3
+        # with:
+        #   github_token: ${{ secrets.MY_TOKEN }}
+        #   publish_dir: public
+        run: |
+          yarn predeploy
+          yarn deploy
          

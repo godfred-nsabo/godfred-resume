@@ -2,7 +2,7 @@ name: Resume Deploy-GitHubPages
 on:
   push:
     branches:
-      - main
+      - master
       - develop
 jobs:
   build:
