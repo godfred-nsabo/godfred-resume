@@ -22,9 +22,8 @@ jobs:
       #   with:
       #     chrome-version: beta
       #     id: setup-chrome
-      # - run: |
-      #     echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }} chrome --version
-
+      - run: |
+          xdg-settings get default-web-browser
       - name: Install 🔧
         run: yarn install
 
